@@ -1,0 +1,27 @@
+{
+  "name": "superselecto",
+  "version": "1.0.0",
+  "description": "proyecto de super selectos",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexQuix/super-selectos.git"
+  },
+  "author": "Alex Quix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexQuix/super-selectos/issues"
+  },
+  "homepage": "https://github.com/AlexQuix/super-selectos#readme",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "ejs": "^3.1.3",
+    "nodemon": "^2.0.4",
+    "query-string": "^6.13.1",
+    "urlencode": "^1.1.0"
+  }
+}

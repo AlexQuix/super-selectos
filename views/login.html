@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style/login.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <section id="container-login" data-login="<%= login %>">
+        <article id="cont-signin">
+            <div>
+                <header><h1>Iniciar Secion</h1></header>
+                <form action="/login/signin" method="POST">
+                    <div id="cont-alert"></div>
+                    <div id="inputs">
+                        <input type="text" name="user" placeholder="Usuario" id="user" required>
+                        <label>
+                            <input type="password" name="password" placeholder="Contraseña" id="password" autocomplete="username" required>
+                            <div class="view-password" data-view="true">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
+                            </div>
+                        </label>
+                    </div>
+                    <div id="btns">
+                        <a href="/login/signup">No tengo una cuenta</a>
+                        <button type="submit">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+        </article>
+        <article id="cont-signup">
+            <div>
+                <header><h1>Crear Cuenta</h1></header>
+                <form action="/login/signup/create-user" method="POST" enctype="multipart/form-data">
+                    <div id="cont-alert"></div>
+                    <div id="inputs">
+                        <input type="text" name="user" placeholder="Usuario" id="input-user" required >
+                        <label>
+                            <input type="password" name="password" placeholder="Contraseña" id="input-password1" autocomplete="username" required>
+                            <div class="view-password" data-view="true">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="password" placeholder="Coloca de nuevo la contraseña" id="input-password2" autocomplete="username" required>
+                            <div class="view-password" data-view="true">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye" class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
+                            </div>
+                        </label>
+                        <input type="email" name="email" placeholder="example@gmail.com" required>
+                        <input type="text" name="direction" placeholder="Direccion" required>
+                        <input type="text" name="country" placeholder="Pais" required>
+                        <input type="text" name="money" placeholder="Dinero" required>
+                    </div>
+                    <div id="btns">
+                        <a href="/login/signin">Tengo una cuenta</a>
+                        <button type="submit">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+        </article>
+        <article id="cont-informacioncuenta">
+            <%- include("parts/menu") %> 
+            <div id="container-inf">
+                <header><h1>Informacion de la cuenta</h1></header>
+                <div id="inf">
+
+                </div>
+                <div id="btns">
+                    <a href="/login/signup">Crear una cuenta</a>
+                    <a href="/login/signin">Iniciar secion</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+<script src="/js/login.js"></script>
+</body>
+</html>

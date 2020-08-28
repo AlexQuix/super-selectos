@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form>
+            <input type="text" name="name" required placeholder="Nombre">
+            <input type="text" name="wordkey" required placeholder="Palabras clave">
+            <input type="text" name="price" required placeholder="Precio">
+            <input type="text" name="classification" required placeholder="Clasificacion">
+            <textarea name="description" cols="30" rows="10" placeholder="Descripcion"></textarea>
+            <input type="file" name="file" required>
+            <button>Enviar</button>
+        </form>
+    </section>
+
+<script type="text/javascript">
+    function intAddProducto(){
+        let btn = document.querySelector("button");
+        btn.onclick = sendFormProduct;
+    }
+    async function sendFormProduct(e){
+        e.preventDefault();
+        let formdata = createFormdata();
+        let response = await fetch("/product/add-product",{
+            method: "POST",
+            body: formdata
+        });
+        let text = await response.text();
+        alert(text);
+    }
+    function createFormdata(){
+        let form = document.querySelector("form");
+        let formdata = new FormData(form);
+        let id = Math.random().toString(30).substr(2, 10) + "-" + Math.floor(Math.random() * 10);
+        formdata.append("id", `${id}`);
+        return formdata;
+    }
+    window.onload = intAddProducto;
+</script>
+</body>
+</html>

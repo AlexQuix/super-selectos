@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital@1&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <%- include("parts/menu") %>
+    <section id="container-product">
+        <header><h1>Productos</h1></header>
+        <section id="list-product" data-clasification="<%= clasification %>">
+            
+        </section>
+    </section>
+    <%- include("parts/carrito") %> 
+    <%- include("parts/loader")  %> 
+
+<script src="/js/product.js"></script>
+</body>
+</html>

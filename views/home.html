@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style/home.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <%- include("parts/menu") %> 
+    <section id="container-publicidad">
+        <img src="/img/portada.jpg" alt="">
+    </section>
+    <section id="container-product">
+        <header><h1>Productos</h1></header>
+        <div>
+            <a href="/product/clasification/carne">
+                <img src="/img/clasification/carnes.jpg" alt="">
+                <header><h1>Carnes</h1></header>
+            </a>
+            <a href="/product/clasification/alimentos">
+                <img src="/img/clasification/alimentos.jpg" alt="">
+                <header><h1>Alimentos</h1></header>
+            </a>
+            <a href="/product/clasification/juguetes">
+                <img src="/img/clasification/juguetes.jpeg" alt="">
+                <header><h1>Juguetes</h1></header>
+            </a>
+            <a href="/product/clasification/electronica">
+                <img src="/img/clasification/electronica.jpg" alt="">
+                <header><h1>Electronica</h1></header>
+            </a>
+            <a href="/product/clasification/aseo">
+                <img src="/img/clasification/aseo.jpg" alt="">
+                <header><h1>Aseo personal</h1></header>
+            </a>
+            <a href="/product/clasification/general">
+                <img src="/img/clasification/mas.jpeg" alt="">
+                <header><h1>Mas</h1></header>
+            </a>
+        </div>
+    </section>
+    <%- include("parts/carrito") %> 
+</body>
+</html>

@@ -1,0 +1,166 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --color1: rgba(106,61,53,1);
+    --color2: rgb(20, 158, 82);
+    --color3: #759126;
+    --color4: #fff;
+}
+
+
+#container-product{
+    width: 100%;
+    padding-top: 90px;
+    font-size: 20px;
+}
+#container-product > header > h1,
+#container-product > #list-product .product > #cont-text > header > h1{
+    width: 100%;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 2em;
+    font-family: "Sriracha";
+    box-sizing: border-box;
+}
+#container-product > #list-product{
+    width: 100%;
+    padding: 0em 3em;
+    box-sizing: border-box;
+}
+
+
+/* PRODUCTO */
+#carrito-container-product > div > #cont-producto .product,
+#container-product > #list-product .product{
+    cursor: pointer;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 10px;
+    background: rgb(240, 240, 240);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+#carrito-container-product > div > #cont-producto .product > #inf-product,
+#container-product > #list-product .product > article{
+    width: 100%;
+    padding: 0.8em 3em;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+#carrito-container-product > div > #cont-producto .product > #inf-product > #cont-img,
+#container-product > #list-product .product article > #cont-img{
+    width: 200px;
+    height: 100%;
+    margin-right: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#carrito-container-product > div > #cont-producto .product > #inf-product > #cont-img > img,
+#container-product > #list-product .product > article > #cont-img > img{
+    width: 100%;
+    height: 100%;
+}
+#carrito-container-product > div > #cont-producto .product > #inf-product > #cont-text,
+#container-product > #list-product .product > article > #cont-text{
+    width: 80%;
+    padding: 0px 1em;
+}
+#carrito-container-product > div > #cont-producto .product > #inf-product > #cont-text > header > h1,
+#container-product > #list-product .product > article > #cont-text > header > h1{
+    width: 100%;
+    height: 39px;
+    padding-top: 0.5em;
+    font-size: 1.1em;
+    font-family: "Sriracha";
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--color2);
+    overflow: hidden;
+    transition: 0.5s;
+}
+#carrito-container-product > div > #cont-producto .product > #inf-product > #cont-text > p,
+#container-product > #list-product .product > article > #cont-text > p{
+    display: block;
+    width: 100%;
+    height: 25px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    font-family: "Sriracha";
+    font-size: 0.8em;
+    text-align: left;
+    color: rgb(70, 70, 70);
+    overflow: hidden;
+}
+#carrito-container-product > div > #cont-producto .product > #inf-product > #cont-text > span,
+#container-product > #list-product .product > article > #cont-text > span{
+    width: 100%;
+    padding-left: 10px;
+    font-family: "Sriracha";
+    font-size: 1em;
+    color: rgb(58, 58, 58);
+}
+
+#carrito-container-product > div > #cont-producto .product:hover,
+#container-product > #list-product .product:hover{
+    background: var(--color4);
+}
+
+#carrito-container-product > div > #cont-producto .product > #inf-product > #cont-text > header > h1,
+#container-product > #list-product .product:hover > article > #cont-text > header > h1{
+    color: var(--color3);
+}
+
+
+
+
+
+
+
+
+#carrito-container-product > div > #cont-producto .product > .btn-close,
+#container-product > #list-product .product > .btns{
+    width: 10%;
+    background: var(--color2);
+    border-left: 5px solid var(--color2);
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+#carrito-container-product > div > #cont-producto .product > .btn-close > svg,
+#container-product > #list-product .product > .btns > svg{
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+    transition: 0.5s;
+}
+#carrito-container-product > div > #cont-producto .product > .btn-close > span,
+#container-product > #list-product .product > .btns > span{
+    margin-top: 10px;
+    font-family: "Sriracha";
+    font-size: 0.9em;
+    line-height: 1.3em;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+}
+
+#container-product > #list-product .product > .btns:hover{
+    background: rgb(240, 240, 240);
+}
+#container-product > #list-product .product > .btns:hover > svg{
+    fill: var(--color2);
+    transform: scale(1.3);
+}
+#container-product > #list-product .product > .btns:hover > span{
+    color: var(--color2);
+}
